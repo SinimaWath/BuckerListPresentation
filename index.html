@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+        :root {
+            --active-color: #fcef36;
+            --second-color: #384557;
+            --help-color: white;
+            --third-color: #1db7b8;
+        }
+
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+        .slide {
+            padding: 50px 75px 0;
+            background-color: var(--second-color);
+        }
+
+        .slide h2 {
+            color: var(--help-color);
+            margin: 1vh 0 0;
+            text-align: center;
+            font-size: 60px;
+        }
+
+        .slide h3 {
+            color: var(--help-color);
+        }
+
+        .slide p {
+            color: var(--help-color);
+        }
+
+        .slide:after {
+            display: none;
+        }
+
+        .slide .border {
+            width: 100%;
+            display: inline-block;
+            height: 1vh;
+            background-color: var(--active-color);
+        }
+
+        .li:before {
+            color: #fcef36;
+            content: "\25b6";
+            margin-right: 10px;
+            transform: translate(-110%, 0);
+            position: absolute;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .title-slide {
+            margin: auto;
+            width: fit-content;
+            flex-direction: column;
+        }
+
+        .title-h2 {
+            margin-bottom: -3vh;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Bucket List App</h1>
+    </header>
+
+    <section class="slide" id="team">
+        <div class="title-slide">
+            <h2 class="title-h2">Парашютная молитва</h2>
+            <div class="border"></div>
+        </div>
+        <section class="team">
+            <figure>
+                <img src="pictures/nikita.jpg">
+                <figcaption id="nikita-cap">
+                    <p>Никита Алтунин</p>
+                    <p>IOS</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="pictures/vlad.jpg">
+                <figcaption id="vlad-cap">
+                    <p>Владислав Тарасов</p>
+                    <p>IOS + Back-end</p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="pictures/nikita.jpg">
+                <figcaption id="max-cap">
+                    <p>Максим Цыганков</p>
+                    <p>IOS</p>
+                </figcaption>
+            </figure>
+        </section>
+        <style>
+
+            #team .title-h2 {
+                margin-bottom: -3vh;
+            }
+
+            #team p {
+                margin: 10px 0 0;
+                text-align: center;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #team .team {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 55vh;
+            }
+
+            #team figure {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #team img {
+                height: 20vh;
+                width: 20vh;
+                object-fit: cover;
+                border: 1px white solid;
+                border-radius: 50%;
+
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="about-app">
+
+        <div class="project-name">
+            <h2>Успех</h2>
+            <div class="border"></div>
+        </div>
+
+        <section class="goals">
+
+            <figure class="planner next">
+                <div class="img">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65"><path d="M50.2 27H29.4a.8.8 0 0 1 0-1.6h20.8a.8.8 0 0 1 0 1.6zM50.2 44.7H29.4a.8.8 0 0 1 0-1.6h20.8a.8.8 0 0 1 0 1.6z"/><path d="M50.8 4.6H50V1a1 1 0 1 0-2 0v3.6h-3.5V1a1 1 0 1 0-2 0v3.6H39V1a1 1 0 1 0-2 0v3.6h-3.5V1a1 1 0 1 0-2 0v3.6H28V1a1 1 0 1 0-2 0v3.6h-3.5V1a1 1 0 1 0-2 0v3.6H17V1a1 1 0 1 0-2 0v3.6h-.8c-5 0-9 4-9 9V56c0 5 4 9 9 9h36.6c5 0 9-4 9-9V13.6c0-5-4-9-9-9zm7 51.4a7 7 0 0 1-7 7H14.2a7 7 0 0 1-7-7V13.6a7 7 0 0 1 7-7h.8v3a1 1 0 1 0 2 0v-3h3.5v3a1 1 0 1 0 2 0v-3H26v3a1 1 0 1 0 2 0v-3h3.5v3a1 1 0 1 0 2 0v-3H37v3a1 1 0 1 0 2 0v-3h3.5v3a1 1 0 1 0 2 0v-3H48v3a1 1 0 1 0 2 0v-3h.8a7 7 0 0 1 7 7V56zm-34-33.6l-5 7.8a1 1 0 0 1-1.4.3l-4-2.9a1 1 0 1 1 1.1-1.6l3.2 2.3 4.4-7a1 1 0 1 1 1.7 1zm0 17.7l-5 7.9a1 1 0 0 1-1.4.3l-4-3a1 1 0 1 1 1.1-1.6l3.2 2.3 4.4-7a1 1 0 1 1 1.7 1.1z"/></svg>
+                </div>
+                <figcaption>
+                    <p class="li">Планирование</p>
+                </figcaption>
+            </figure>
+
+            <figure class="motivation next">
+                <div class="img">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 496 496"><path d="M130.63 154.36A31.87 31.87 0 0 1 136 172.1V224h-8a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h112a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8h-8v-56c0-4.41 3.6-8 8-8 13.23 0 24-10.77 24-24V24c0-13.23-10.77-24-24-24-6.17 0-11.74 2.4-16 6.24C219.74 2.4 214.17 0 208 0s-11.74 2.4-16 6.24C187.74 2.4 182.17 0 176 0s-11.74 2.4-16 6.24A23.85 23.85 0 0 0 144 0c-13.23 0-24 10.77-24 24v99.89c0 9.5 2.8 18.72 8.06 26.62zM232 272h-96v-32h96zm-80-48v-32h64v32zm88-80c-13.23 0-24 10.77-24 24v8h-64v-3.89c0-9.5-2.8-18.72-8.06-26.62l-2.56-3.84a31.91 31.91 0 0 1-5.38-17.76v-13.37c2.51.9 5.18 1.48 8 1.48 6.17 0 11.74-2.4 16-6.24 2.6 2.35 5.7 4.08 9.13 5.12A23.95 23.95 0 0 0 192 128h48c2.82 0 5.49-.57 8-1.47V136c0 4.41-3.6 8-8 8zm0-32h-48c-4.4 0-8-3.59-8-8s3.6-8 8-8h48c4.4 0 8 3.59 8 8s-3.6 8-8 8zm0-96c4.4 0 8 3.59 8 8v57.47a23.67 23.67 0 0 0-8-1.47h-8V24c0-4.41 3.6-8 8-8zm-32 0c4.4 0 8 3.59 8 8v56h-16V24c0-4.41 3.6-8 8-8zm-32 0c4.4 0 8 3.59 8 8v57.47a24 24 0 0 0-13.59 12.23A7.93 7.93 0 0 1 168 88V24c0-4.41 3.6-8 8-8zm-40 8a8.01 8.01 0 0 1 16 0v64a8.01 8.01 0 0 1-16 0zm0 0"/><path d="M360 264h-15.17a167.9 167.9 0 0 0-13.36-32.17l10.19-10.17a7.96 7.96 0 0 0 0-11.32l-56-56a7.99 7.99 0 0 0-11.32 0l-16 16 11.32 11.32L280 171.3 324.68 216l-8.83 8.83a8.01 8.01 0 0 0-1.23 9.74A150.82 150.82 0 0 1 331.01 274a8 8 0 0 0 7.74 6.01H352v64h-13.25a8 8 0 0 0-7.74 6 150.93 150.93 0 0 1-16.38 39.43 8.01 8.01 0 0 0 1.22 9.74l8.83 8.83L280 452.69l-8.84-8.83a8 8 0 0 0-9.75-1.22A150.76 150.76 0 0 1 222 459.02a8 8 0 0 0-6 7.74V480h-64v-13.24a8.02 8.02 0 0 0-6-7.75 150.76 150.76 0 0 1-39.41-16.38 8.02 8.02 0 0 0-9.75 1.22L88 452.69 43.32 408l8.83-8.83a8.01 8.01 0 0 0 1.23-9.74A150.82 150.82 0 0 1 36.99 350a8 8 0 0 0-7.74-6.01H16v-64h13.25a8 8 0 0 0 7.74-6 150.93 150.93 0 0 1 16.39-39.43 8.01 8.01 0 0 0-1.23-9.74L43.32 216 88 171.31l10.34 10.35 11.32-11.32-16-16a7.99 7.99 0 0 0-11.32 0l-56 56a7.96 7.96 0 0 0 0 11.32l10.19 10.17A166.99 166.99 0 0 0 23.17 264H8a8 8 0 0 0-8 8v80a8 8 0 0 0 8 8h15.17a167.9 167.9 0 0 0 13.36 32.17l-10.19 10.17a7.96 7.96 0 0 0 0 11.32l56 56a7.99 7.99 0 0 0 11.32 0l10.18-10.18c10.21 5.55 21 10.03 32.16 13.36V488a8 8 0 0 0 8 8h80a8 8 0 0 0 8-8v-15.17a167.62 167.62 0 0 0 32.16-13.36l10.18 10.18a7.99 7.99 0 0 0 11.32 0l56-56a7.96 7.96 0 0 0 0-11.3l-10.19-10.18c5.56-10.22 10.03-21 13.36-32.17H360a8 8 0 0 0 8-8v-80a8 8 0 0 0-8-8zm0 0"/><path d="M48 312c0 75 61 136 136 136s136-61 136-136c0-48.4-26.05-93.54-68-117.8l-8 13.84A120.5 120.5 0 0 1 304 312c0 66.17-53.83 120-120 120S64 378.17 64 312c0-42.7 23-82.54 60-103.95l-8-13.84A136.5 136.5 0 0 0 48 312zm0 0"/><path d="M156.34 423.12a8.02 8.02 0 0 0 9.33-1.46l72-72A8 8 0 0 0 232 336h-24l14.4-19.2A8 8 0 0 0 216 304h-56c-3.2 0-6.1 1.9-7.35 4.85l-24 56A7.98 7.98 0 0 0 136 376h22.55l-6.44 38.69a8.02 8.02 0 0 0 4.23 8.43zm-8.2-63.12l17.14-40H200l-14.4 19.2A8 8 0 0 0 192 352h20.69L172 392.69l3.9-23.38A8 8 0 0 0 168 360zm0 0"/></svg>
+                </div>
+                <figcaption>
+                    <p class="li">Мотивация</p>
+                </figcaption>
+            </figure>
+
+            <figure class="goal next">
+                <div class="img">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><path d="M32 96h80c18 0 32-14 32-32v-4a32 32 0 1 0-42-46 40 40 0 0 0-69 18C15 32 0 46 0 64s14 32 32 32zm96-80a16 16 0 0 1 9 29c-6-8-15-13-26-13h1c0-9 7-16 16-16zM32 48l5 1c3 1 6 1 8-1s3-4 3-7v-1a24 24 0 0 1 48 0v1a8 8 0 0 0 11 8l5-1a16 16 0 0 1 0 32H32a16 16 0 0 1 0-32zm0 0M384 96h80a32 32 0 1 0-1-64 40 40 0 0 0-78 0c-18 0-33 14-33 32s14 32 32 32zm0-48l5 1a8 8 0 0 0 11-8v-1a24 24 0 0 1 48 0v1a8 8 0 0 0 11 8l5-1a16 16 0 0 1 0 32h-80a16 16 0 0 1 0-32zm0 0M472 433v-1c0-24-18-45-42-48L256 118V77l75-30a8 8 0 0 0 0-14L251 1a8 8 0 0 0-11 7v110L66 384a48 48 0 0 0-42 49 32 32 0 0 0 8 63h432a32 32 0 0 0 8-63zm-151 47H175l1-8c0-14-11-25-25-24-4-14-17-24-32-24-3-19-17-33-35-38l82-126 27 48c2 3 4 4 7 4s6-2 7-5l32-70 33 94a8 8 0 0 0 15 1l41-75 84 129c-18 5-32 19-35 38-15 0-28 10-32 24a24 24 0 0 0-24 32zM176 245l72-110 70 107-36 66-34-95a8 8 0 0 0-15 0l-34 73zm80-225l50 20-50 20zM32 480c-9 0-16-7-16-16s7-16 15-16h2l6-3c2-2 2-4 2-7l-1-6a32 32 0 0 1 64 0v1a8 8 0 0 0 11 8l5-1c9 0 16 7 16 16v2a8 8 0 0 0 12 7c5-3 12 1 12 7 0 4-4 8-8 8zm432 0H344a8 8 0 0 1 0-16l4 1a8 8 0 0 0 12-7v-2a16 16 0 0 1 21-15c3 1 6 1 8-1s3-4 3-7v-1a32 32 0 1 1 63 6 8 8 0 0 0 9 10 16 16 0 0 1 0 32zm0 0"/></svg>
+                </div>
+                <figcaption>
+                    <p class="li">Цель</p>
+                </figcaption>
+            </figure>
+        </section>
+        <style>
+            #about-app .project-name {
+                margin: auto;
+                width: fit-content;
+                flex-direction: column;
+            }
+
+            #about-app .goals {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 55vh;
+            }
+
+            #about-app .project-name h2 {
+                margin-bottom: -3vh;
+            }
+
+            #about-app .goals img {
+                height: 20vh;
+                width: 20vh;
+                border: 1px white solid;
+                border-radius: 50%;
+            }
+
+            #about-app .goals .img {
+                background: var(--third-color);
+                border-radius: 50%;
+                height: 20vh;
+                width: 20vh;
+                object-fit: cover;
+            }
+
+            #about-app .goals  svg {
+                fill: var(--help-color);
+                transform: scale(0.6, 0.6);
+            }
+
+            #about-app figure {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        </style>
+    </section>
+
+    <section class="slide" id="project">
+        <div class="center next">
+            <h2>Bucket List</h2>
+            <div class="border"></div>
+        </div>
+
+        <style>
+            #project h2 {
+                margin-bottom: -3vh;
+                font-size: 80px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="motivation">
+        <div class="project-name">
+            <h2>Bucket List</h2>
+            <div class="border"></div>
+        </div>
+
+        <h3 class="center next">Лучшая мотивация - это ☠️</h3>
+
+        <style>
+            #motivation .project-name {
+                margin: auto;
+                width: fit-content;
+                flex-direction: column;
+            }
+
+            #motivation .project-name h2 {
+                margin-bottom: -3vh;
+            }
+
+            #motivation h3 {
+                width: fit-content;
+                font-size: 60px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="tech">
+        <div class="tech-name">
+            <h2>Клиент-сервер</h2>
+            <div class="border"></div>
+        </div>
+        <section class="table">
+            <div class="row client">
+                <h3>Клиент</h3>
+                <p>IOS</p>
+            </div>
+            <div class="row backend">
+                <h3>Бэкенд</h3>
+                <ul>
+                    <li>TypeScript</li>
+                    <li>InversifyJS</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+        </section>
+        <style>
+            #tech .tech-name {
+                margin: auto;
+                width: fit-content;
+                flex-direction: column;
+            }
+
+            #tech .tech-name h2 {
+                margin-bottom: -3vh;
+            }
+
+            #tech .table {
+                display: flex;
+                justify-content: space-between;
+                height: 55vh;
+            }
+
+            #tech h3 {
+                font-size: 50px;
+            }
+
+            #tech ul {
+                color: var(--help-color);
+            }
+
+            #tech .row {
+                text-align: center;
+            }
+
+
+        </style>
+    </section>
+
+    <section class="slide" id="present">
+        <div class="center">
+            <h2>Демонстрация</h2>
+            <div class="border"></div>
+        </div>
+
+        <style>
+
+            #present h2 {
+                margin-bottom: -3vh;
+            }
+        </style>
+    </section>
+
+    <footer class="badge">
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
